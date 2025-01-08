@@ -1,0 +1,116 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    background-color: #3C3D37;
+    opacity: 0.7;
+}
+
+.background {
+    position: relative; /* Untuk membuat elemen anak di dalamnya */
+    overflow: hidden; /* Agar konten tambahan tidak keluar */
+    width: 100vw; /* Full width dari viewport */
+    height: 100vh; /* Full height dari viewport */
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('rimbun.JPG');
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%) blur(2px);
+    opacity: 0.8;
+    z-index: 0; /* Letakkan di belakang konten */
+}
+
+.penjelasan, header, .foto {
+    position: relative; /* Agar tetap di atas background */
+    z-index: 1; /* Pastikan di atas pseudo-element */
+    color: white;
+}
+
+.penjelasan {
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    margin-bottom: 15px;
+    padding-top: 60px;
+    padding-right: 400px;
+    padding-left: 20px;
+}
+
+.penjelasan img {
+    width: 350px;
+    height: auto;
+    margin-left: 900px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+p{
+    padding-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    z-index: 1;
+}
+
+.logo {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background-image: url('hmif.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+ul {
+    list-style-type: none;
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+    font-weight: bold;  
+}
+
+.foto img {
+    width: 100%;
+    height: auto;
+}
+
+button {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #04AA6D;
+}
+
+.button1:hover {
+    background-color: #04AA6D;
+    color: white;
+  }
